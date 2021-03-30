@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: CharacterSpriteLibAsset
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: CharacterBody
+    m_Hash: -836424419
+    m_CategoryList:
+    - m_Name: Head
+      m_Hash: 130111906
+      m_Sprite: {fileID: 4664968880206707712, guid: a6d13dad092f07e4280b5002510db7b1, type: 3}
+    - m_Name: LeftArm
+      m_Hash: -343733542
+      m_Sprite: {fileID: -3942848290775604735, guid: a6d13dad092f07e4280b5002510db7b1, type: 3}
+    - m_Name: LeftLeg
+      m_Hash: 101577729
+      m_Sprite: {fileID: -8174525308056045187, guid: a6d13dad092f07e4280b5002510db7b1, type: 3}
+    - m_Name: RightArm
+      m_Hash: 1806956327
+      m_Sprite: {fileID: -3069717191540456169, guid: a6d13dad092f07e4280b5002510db7b1, type: 3}
+    - m_Name: RightLeg
+      m_Hash: -2042820100
+      m_Sprite: {fileID: 509377637868306845, guid: a6d13dad092f07e4280b5002510db7b1, type: 3}
+    - m_Name: drop
+      m_Hash: 1880425762
+      m_Sprite: {fileID: -7171916729087747203, guid: ac9c94827c99a7f46b425b48ed52ca3f, type: 3}
