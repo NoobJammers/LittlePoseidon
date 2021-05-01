@@ -25,7 +25,7 @@ public class FishSwarm : MonoBehaviour
                 if (pixel == Color.black)
                 {
                     k++;
-                    if (k % 50 == 0)
+                    if (k % 100 == 0)
                     {
                         var ratiox = 2 * i / rend.sprite.rect.width;//half the width as we are that's how extents work)
                         var ratioy = 2 * j / rend.sprite.rect.height;//half the height as we are that's how extents work)
