@@ -28,7 +28,7 @@ public class PlayerHandler1 : MonoBehaviour
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] bool isGrounded;
     CharState currentState;
-    float horizontalInput, startTimeBetweenAttacks = 1f, timeBetweenAttacks;
+    float horizontalInput, startTimeBetweenAttacks = 1f, timeBetweenAttacks, startTimeBetweenJumps = 0.9f, timeBetweenJumps;
 
     Vector3 newVelocity;
     bool didLand = true;
@@ -83,7 +83,9 @@ public class PlayerHandler1 : MonoBehaviour
         if (timeBetweenAttacks > 0)
             timeBetweenAttacks -= Time.deltaTime;
 
-
+        //Prevent player from spamming jump by keeping a delay
+        if (timeBetweenJumps > 0)
+            timeBetweenJumps -= Time.deltaTime;
 
         //Prevent multi-jumping
         if (isGrounded)
@@ -91,8 +93,13 @@ public class PlayerHandler1 : MonoBehaviour
 
             if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("attack") && Input.GetKeyDown(KeyCode.Space))
             {
-                rigidBody.AddForce(Vector2.up * jumpForceMultiplier);
-                ChangeState(CharState.TakeOff);
+                if (timeBetweenJumps <= 0)
+                {
+                    rigidBody.AddForce(Vector2.up * jumpForceMultiplier);
+                    ChangeState(CharState.TakeOff);
+                    timeBetweenJumps = startTimeBetweenJumps;
+                }
+
 
             }
             else if (Input.GetMouseButtonDown(0))
